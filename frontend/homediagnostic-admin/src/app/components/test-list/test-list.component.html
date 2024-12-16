@@ -1,0 +1,21 @@
+<p>test-list works!</p>
+<div class="table-responsive m-5">
+<table class="table table-bordered table-striped">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>TEST NAME</th>
+            <th>TEST PURPOSE</th>
+            <th>RESULT</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let test of tests">
+            <td>{{test.id}}</td>
+            <td>{{test.testName}}</td>
+            <td>{{test.testPurpose}}</td>
+            <td>{{test.result}}</td>
+        </tr>
+    </tbody>
+</table>
+</div>

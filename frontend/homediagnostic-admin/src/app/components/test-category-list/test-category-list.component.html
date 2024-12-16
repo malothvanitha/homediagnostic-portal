@@ -1,0 +1,34 @@
+<div class="m-5 col-6">
+    <table class="table table-borded table-striped">
+        <thead>
+            <tr>
+                <th>OPTIONS</th>
+                <th>ID</th>
+                <th>CATEGORY NAME</th>
+            </tr>
+        </thead>
+    </table>
+    <tbody>
+    <tr *ngFor="let testCategory of testCategories">
+        <td>
+            <button
+              class="btn btn-danger"
+              (click)="removeCategory(testCategory.id)"
+            >
+              Delete
+            </button>
+            <button
+              class="btn btn-success"
+              (click)="showTestCategoryEdit(testCategory.id)"
+            >
+              Edit
+            </button>
+        </td>
+        <td>{{ testCategory.id }}</td>
+        <td>{{ testCategory.categoryName }}</td>
+      </tr>
+      <tr *ngIf="!testCategories || testCategories. length ==0">
+        <td colspan="3">No data available</td>
+      </tr>
+    </tbody>
+</div>
